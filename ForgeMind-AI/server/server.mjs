@@ -28,7 +28,7 @@ console.log("✅ Gemini API key loaded.");
    SERVER + GEMINI
 ========================================= */
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 const ai = new GoogleGenAI({
   apiKey: process.env.GEMINI_API_KEY
