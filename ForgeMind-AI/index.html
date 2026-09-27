@@ -1,0 +1,1665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="ForgeMind AI - Build AI. Create Ideas. Shape the Future."
+  />
+  <title>ForgeMind AI | AI Builder</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="icon" type="image/svg+xml" href="logo.svg" />
+</head>
+
+<body>
+
+  <!-- =========================================
+       FORGEMIND INTRO
+  ========================================== -->
+  <div class="intro-screen" id="introScreen">
+    <div class="intro-content">
+
+      <div class="intro-logo">
+        <img src="logo.svg" alt="ForgeMind AI logo" />
+      </div>
+
+      <div class="intro-badge">
+        <span class="intro-dot"></span>
+        AI PROJECT LAB
+      </div>
+
+      <h1>
+        ForgeMind <span class="gradient-text">AI</span>
+      </h1>
+
+      <p class="intro-tagline">
+        AI SE AI KA NIRMAN.
+      </p>
+
+      <p class="intro-description">
+        Plan, analyze and build practical AI projects while keeping
+        important decisions under your control.
+      </p>
+
+      <div class="intro-flow">
+        <span>Plan</span>
+        <span class="flow-line">→</span>
+        <span>Analyze</span>
+        <span class="flow-line">→</span>
+        <span>Build</span>
+        <span class="flow-line">→</span>
+        <span>Approve</span>
+        <span class="flow-line">→</span>
+        <span>Execute</span>
+      </div>
+
+      <button class="intro-enter" id="enterForgeMind" type="button">
+        Enter ForgeMind <span>→</span>
+      </button>
+
+      <p class="intro-note">
+        Prototype v1.1 • Built step by step
+      </p>
+
+    </div>
+  </div>
+
+  <!-- =========================================
+       NAVBAR
+  ========================================== -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+
+      <a href="#home" class="brand" aria-label="ForgeMind AI Home">
+        <img
+          src="logo.svg"
+          class="brand-logo"
+          alt="ForgeMind AI logo"
+        />
+        <span>ForgeMind AI</span>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#builder">AI Builder</a>
+        <a href="#tools">AI Tools</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+      </div>
+
+      <a class="nav-cta" href="#builder">Get Started</a>
+
+      <button
+        class="menu-btn"
+        id="menuBtn"
+        type="button"
+        aria-label="Open menu"
+      >
+        ☰
+      </button>
+
+    </div>
+  </nav>
+
+  <!-- =========================================
+       MAIN CONTENT
+  ========================================== -->
+  <main>
+
+    <!-- =======================================
+         HERO
+    ======================================== -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+
+        <div>
+          <div class="eyebrow">
+            <span></span>
+            AI Project Lab • Prototype v1.1
+          </div>
+
+          <h1>
+            Build AI.<br />
+            <span class="gradient-text">Create Ideas.</span><br />
+            Shape the Future.
+          </h1>
+
+          <p>
+            ForgeMind AI is a student-focused platform that turns ideas
+            into structured AI project plans using intelligent workflows
+            and practical tools.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#builder">✦ Start Building</a>
+            <a class="btn btn-secondary" href="#tools">Explore AI Tools</a>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <strong>01</strong>
+              <span>Core AI Builder</span>
+            </div>
+
+            <div class="stat">
+              <strong>06</strong>
+              <span>AI Tools</span>
+            </div>
+
+            <div class="stat">
+              <strong>04</strong>
+              <span>Workflow Stages</span>
+            </div>
+
+            <div class="stat">
+              <strong>AI</strong>
+              <span>Gemini Powered</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-orb" aria-hidden="true">
+          <div class="orb-ring">
+            <div class="orb">
+              <div class="orb-center">AI</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================
+         AI BUILDER
+    ======================================== -->
+    <section class="section" id="builder">
+      <div class="container">
+
+        <h2 class="section-title">
+          Turn an idea into an
+          <span class="gradient-text">AI project plan.</span>
+        </h2>
+
+        <p class="section-subtitle">
+          Describe your idea, choose a project type, and ForgeMind generates
+          a structured AI project plan. Powered by a secure backend and Gemini AI.
+        </p>
+
+        <div class="builder-wrap">
+
+          <!-- BUILDER INPUT -->
+          <div class="panel">
+            <h3>AI Builder</h3>
+
+            <p class="hint">
+              Try an idea like “AI study assistant for BCA students”.
+            </p>
+
+            <div class="form-row">
+              <label for="ideaInput">Your idea</label>
+              <textarea
+                id="ideaInput"
+                placeholder="Example: Create an AI study assistant for college students..."
+              ></textarea>
+            </div>
+
+            <div class="form-row">
+              <label for="projectType">Project type</label>
+              <select id="projectType">
+                <option value="web">Web Application</option>
+                <option value="mobile">Android App</option>
+                <option value="assistant">AI Assistant</option>
+                <option value="automation">AI Automation</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="level">Target level</label>
+              <select id="level">
+                <option>Beginner / Student</option>
+                <option>Intermediate</option>
+                <option>Advanced</option>
+              </select>
+            </div>
+
+            <button
+              class="btn btn-primary"
+              id="generateBtn"
+              type="button"
+              style="width:100%;"
+            >
+              ⚡ Generate Project Plan
+            </button>
+          </div>
+
+          <!-- BUILDER RESULT -->
+          <div class="panel builder-result">
+
+            <div class="result-empty" id="resultEmpty">
+              <div>
+                <div class="big">🧠</div>
+                <strong>Your AI-generated plan will appear here.</strong>
+                <p style="margin-top:6px;">
+                  Enter an idea and let ForgeMind turn it into a practical project plan.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="result-loading"
+              id="resultLoading"
+              style="display:none;"
+            >
+              <div>
+                <div class="big">⚙️</div>
+                <strong>ForgeMind is thinking...</strong>
+                <p style="margin-top:6px;">
+                  Analyzing your idea and building the project plan.
+                </p>
+              </div>
+            </div>
+
+            <div class="result-content" id="resultContent">
+
+              <div class="result-head">
+                <div>
+                  <h3 id="resultTitle">AI Project</h3>
+                  <p
+                    style="color:var(--muted); font-size:0.85rem;"
+                    id="resultMeta"
+                  ></p>
+                </div>
+
+                <span class="status">Prototype Ready</span>
+              </div>
+
+              <div class="result-section">
+                <h4>Concept</h4>
+                <p id="resultDescription"></p>
+              </div>
+
+              <div class="result-section">
+                <h4>Suggested Features</h4>
+                <ul id="resultFeatures"></ul>
+              </div>
+
+              <div class="result-section">
+                <h4>Suggested Technologies</h4>
+                <div class="tech-list" id="resultTech"></div>
+              </div>
+
+              <div class="result-section">
+                <h4>Development Steps</h4>
+                <ol id="resultSteps"></ol>
+              </div>
+
+              <div class="result-section">
+                <h4>Next Development Step</h4>
+                <p id="resultNext"></p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================
+         AI TOOLS
+    ======================================== -->
+    <section class="section" id="tools">
+      <div class="container">
+
+        <h2 class="section-title">
+          AI tools for
+          <span class="gradient-text">building smarter.</span>
+        </h2>
+
+        <p class="section-subtitle">
+          Practical AI utilities for generating ideas, improving prompts,
+          understanding code, studying smarter and planning projects.
+        </p>
+
+        <!-- SIX TOOL CARDS -->
+        <div class="cards">
+
+          <div class="card tool-card" id="ideaGeneratorTool">
+            <div class="icon">💡</div>
+            <h3>AI Idea Generator</h3>
+            <p>
+              Generate practical project ideas based on your interests,
+              problems and target users.
+            </p>
+            <button
+              class="tool-btn"
+              id="ideaGeneratorBtn"
+              type="button"
+            >
+              ✦ Generate Ideas
+            </button>
+          </div>
+
+          <div class="card tool-card" id="promptGeneratorTool">
+  <div class="icon">✍️</div>
+
+  <h3>Prompt Generator</h3>
+
+  <p>
+    Turn a rough idea into a clear, structured and
+    high-quality AI prompt.
+  </p>
+
+  <button
+    class="tool-btn"
+    id="promptGeneratorBtn"
+    type="button"
+  >
+    ✦ Create Prompt
+  </button>
+</div>
+
+          <div class="card tool-card" id="codeAssistantTool">
+  <div class="icon">💻</div>
+
+  <h3>Code Assistant</h3>
+
+  <p>
+    Explain code, fix errors, improve logic and generate
+    beginner-friendly coding solutions.
+  </p>
+
+  <button
+    class="tool-btn"
+    id="codeAssistantBtn"
+    type="button"
+  >
+    ✦ Open Code Assistant
+  </button>
+</div>
+
+          <div
+  class="card tool-card"
+  id="textSummarizerTool"
+>
+  <div class="icon">📝</div>
+
+  <h3>Text Summarizer</h3>
+
+  <p>
+    Turn long notes, articles and study material into
+    concise, revision-friendly summaries.
+  </p>
+
+  <button
+    class="tool-btn"
+    id="textSummarizerBtn"
+    type="button"
+  >
+    ✦ Open Summarizer
+  </button>
+</div>
+
+          <div
+  class="card tool-card"
+  id="studyAssistantTool"
+>
+  <div class="icon">🎓</div>
+
+  <h3>Study Assistant</h3>
+
+  <p>
+    Get simple explanations, key concepts, practice questions
+    and a focused study plan for any topic.
+  </p>
+
+  <button
+    class="tool-btn"
+    id="studyAssistantBtn"
+    type="button"
+  >
+    ✦ Open Study Assistant
+  </button>
+</div>
+
+          <div
+  class="card tool-card"
+  id="projectPlannerTool"
+>
+  <div class="icon">🧩</div>
+
+  <h3>Project Planner</h3>
+
+  <p>
+    Turn your project idea into milestones, tasks, technologies
+    and a practical development roadmap.
+  </p>
+
+  <button
+    class="tool-btn"
+    id="projectPlannerBtn"
+    type="button"
+  >
+    ✦ Open Project Planner
+  </button>
+</div>
+
+        </div>
+
+        <!-- AI IDEA GENERATOR WORKSPACE -->
+        <div class="tool-workspace" id="ideaGeneratorWorkspace">
+
+          <div class="tool-workspace-head">
+            <div>
+              <span class="tool-label">AI IDEA GENERATOR</span>
+              <h3>What kind of project do you want to build?</h3>
+              <p>
+                Give ForgeMind a topic, interest or problem and let AI
+                generate practical project ideas.
+              </p>
+            </div>
+          </div>
+
+          <div class="tool-form">
+            <div class="form-row">
+              <label for="ideaTopic">Topic / Interest</label>
+              <input
+                type="text"
+                id="ideaTopic"
+                placeholder="Example: AI projects for BCA students"
+              />
+            </div>
+
+            <button
+              class="btn btn-primary"
+              id="generateIdeasBtn"
+              type="button"
+            >
+              ⚡ Generate Project Ideas
+            </button>
+          </div>
+
+          <div
+            class="tool-loading"
+            id="ideaGeneratorLoading"
+            style="display:none;"
+          >
+            <div class="big">🧠</div>
+            <strong>ForgeMind is generating ideas...</strong>
+            <p>
+              Finding practical project concepts for you.
+            </p>
+          </div>
+
+          <div
+            class="idea-results"
+            id="ideaResults"
+            style="display:none;"
+          ></div>
+
+        </div>
+
+        <!-- =========================================
+     AI PROMPT GENERATOR WORKSPACE
+========================================= -->
+
+<div
+  class="tool-workspace"
+  id="promptGeneratorWorkspace"
+>
+
+  <div class="tool-workspace-head">
+    <div>
+
+      <span class="tool-label">
+        AI PROMPT GENERATOR
+      </span>
+
+      <h3>
+        Turn your rough idea into a powerful AI prompt.
+      </h3>
+
+      <p>
+        Describe what you want to accomplish and ForgeMind
+        will create a clear, structured prompt for you.
+      </p>
+
+    </div>
+  </div>
+
+
+  <div class="tool-form">
+
+    <div class="form-row">
+
+      <label for="promptTopic">
+        What do you want the AI to do?
+      </label>
+
+      <textarea
+        id="promptTopic"
+        placeholder="Example: Explain C++ OOP to a BCA beginner with examples and a quiz."
+      ></textarea>
+
+    </div>
+
+
+    <div class="form-row">
+
+      <label for="promptPurpose">
+        Purpose
+      </label>
+
+      <select id="promptPurpose">
+
+        <option value="learning">
+          Learning
+        </option>
+
+        <option value="coding">
+          Coding
+        </option>
+
+        <option value="writing">
+          Writing
+        </option>
+
+        <option value="research">
+          Research
+        </option>
+
+        <option value="general">
+          General AI Task
+        </option>
+
+      </select>
+
+    </div>
+
+
+    <button
+      class="btn btn-primary"
+      id="generatePromptBtn"
+      type="button"
+    >
+      ⚡ Generate Prompt
+    </button>
+
+  </div>
+
+
+  <!-- LOADING -->
+
+  <div
+    class="tool-loading"
+    id="promptGeneratorLoading"
+    style="display:none;"
+  >
+
+    <div class="big">🧠</div>
+
+    <strong>
+      ForgeMind is crafting your prompt...
+    </strong>
+
+    <p>
+      Structuring instructions, context and expected output.
+    </p>
+
+  </div>
+
+
+  <!-- RESULT -->
+
+  <div
+    class="prompt-result"
+    id="promptResult"
+    style="display:none;"
+  >
+
+    <div class="prompt-result-head">
+
+      <span class="tool-label">
+        GENERATED PROMPT
+      </span>
+
+      <button
+        class="use-idea-btn"
+        id="copyPromptBtn"
+        type="button"
+      >
+        Copy Prompt
+      </button>
+
+    </div>
+
+
+    <pre
+      id="generatedPrompt"
+      class="generated-prompt"
+    ></pre>
+
+  </div>
+
+</div>
+
+<!-- =========================================
+     AI CODE ASSISTANT WORKSPACE
+========================================= -->
+
+<div
+  class="tool-workspace"
+  id="codeAssistantWorkspace"
+>
+
+  <div class="tool-workspace-head">
+    <div>
+
+      <span class="tool-label">
+        AI CODE ASSISTANT
+      </span>
+
+      <h3>
+        Understand, debug and improve your code.
+      </h3>
+
+      <p>
+        Tell ForgeMind what you are trying to build or fix,
+        add your code, and let AI guide you step by step.
+      </p>
+
+    </div>
+  </div>
+
+
+  <div class="tool-form">
+
+    <div class="form-row">
+
+      <label for="codeLanguage">
+        Programming Language
+      </label>
+
+      <select id="codeLanguage">
+
+        <option value="C++">
+          C++
+        </option>
+
+        <option value="JavaScript">
+          JavaScript
+        </option>
+
+        <option value="Python">
+          Python
+        </option>
+
+        <option value="Java">
+          Java
+        </option>
+
+        <option value="HTML/CSS">
+          HTML / CSS
+        </option>
+
+        <option value="SQL">
+          SQL
+        </option>
+
+        <option value="Other">
+          Other
+        </option>
+
+      </select>
+
+    </div>
+
+
+    <div class="form-row">
+
+      <label for="codeTask">
+        What do you need help with?
+      </label>
+
+      <textarea
+        id="codeTask"
+        placeholder="Example: Explain why this program is giving an error and show me a corrected version."
+      ></textarea>
+
+    </div>
+
+
+    <div class="form-row">
+
+      <label for="codeInput">
+        Your Code
+      </label>
+
+      <textarea
+        id="codeInput"
+        class="code-input"
+        placeholder="Paste your code here..."
+        spellcheck="false"
+      ></textarea>
+
+    </div>
+
+
+    <button
+      class="btn btn-primary"
+      id="generateCodeHelpBtn"
+      type="button"
+    >
+      ⚡ Analyze Code
+    </button>
+
+  </div>
+
+
+  <!-- LOADING -->
+
+  <div
+    class="tool-loading"
+    id="codeAssistantLoading"
+    style="display:none;"
+  >
+
+    <div class="big">💻</div>
+
+    <strong>
+      ForgeMind is analyzing your code...
+    </strong>
+
+    <p>
+      Understanding the problem and preparing a practical solution.
+    </p>
+
+  </div>
+
+
+  <!-- RESULT -->
+
+  <div
+    class="code-result"
+    id="codeResult"
+    style="display:none;"
+  >
+
+    <div class="code-result-section">
+
+      <div class="prompt-result-head">
+
+        <span class="tool-label">
+          EXPLANATION
+        </span>
+
+      </div>
+
+      <p id="codeExplanation"></p>
+
+    </div>
+
+
+    <div class="code-result-section">
+
+      <div class="prompt-result-head">
+
+        <span class="tool-label">
+          CORRECTED / SUGGESTED CODE
+        </span>
+
+        <button
+          class="use-idea-btn"
+          id="copyCodeBtn"
+          type="button"
+        >
+          Copy Code
+        </button>
+
+      </div>
+
+      <pre
+        id="generatedCode"
+        class="generated-prompt"
+      ></pre>
+
+    </div>
+
+
+    <div class="code-result-section">
+
+      <span class="tool-label">
+        STEP-BY-STEP FIX
+      </span>
+
+      <ol id="codeSteps"></ol>
+
+    </div>
+
+
+    <div class="code-result-section">
+
+      <span class="tool-label">
+        EXTRA TIPS
+      </span>
+
+      <ul id="codeTips"></ul>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- =========================================
+     AI TEXT SUMMARIZER WORKSPACE
+========================================= -->
+
+<div
+  class="tool-workspace"
+  id="textSummarizerWorkspace"
+>
+
+  <div class="tool-workspace-head">
+    <div>
+
+      <span class="tool-label">
+        AI TEXT SUMMARIZER
+      </span>
+
+      <h3>
+        Turn long text into clear, useful summaries.
+      </h3>
+
+      <p>
+        Paste your notes, article or study material and
+        ForgeMind will create a concise summary for you.
+      </p>
+
+    </div>
+  </div>
+
+
+  <div class="tool-form">
+
+    <div class="form-row">
+
+      <label for="summaryPurpose">
+        Summary Style
+      </label>
+
+      <select id="summaryPurpose">
+
+        <option value="concise">
+          Concise Summary
+        </option>
+
+        <option value="study">
+          Study Notes
+        </option>
+
+        <option value="bullet">
+          Key Points
+        </option>
+
+        <option value="exam">
+          Exam Revision
+        </option>
+
+        <option value="simple">
+          Simple Explanation
+        </option>
+
+      </select>
+
+    </div>
+
+
+    <div class="form-row">
+
+      <label for="summaryInput">
+        Text to Summarize
+      </label>
+
+      <textarea
+        id="summaryInput"
+        class="summary-input"
+        placeholder="Paste your notes, article or study material here..."
+      ></textarea>
+
+    </div>
+
+
+    <button
+      class="btn btn-primary"
+      id="generateSummaryBtn"
+      type="button"
+    >
+      ⚡ Summarize Text
+    </button>
+
+  </div>
+
+
+  <!-- LOADING -->
+
+  <div
+    class="tool-loading"
+    id="textSummarizerLoading"
+    style="display:none;"
+  >
+
+    <div class="big">📝</div>
+
+    <strong>
+      ForgeMind is summarizing your text...
+    </strong>
+
+    <p>
+      Extracting the most useful information for you.
+    </p>
+
+  </div>
+
+
+  <!-- RESULT -->
+
+  <div
+    class="summary-result"
+    id="summaryResult"
+    style="display:none;"
+  >
+
+    <div class="summary-result-section">
+
+      <div class="prompt-result-head">
+
+        <span class="tool-label">
+          SUMMARY
+        </span>
+
+        <button
+          class="use-idea-btn"
+          id="copySummaryBtn"
+          type="button"
+        >
+          Copy Summary
+        </button>
+
+      </div>
+
+      <div
+        id="generatedSummary"
+        class="generated-summary"
+      ></div>
+
+    </div>
+
+
+    <div class="summary-result-section">
+
+      <span class="tool-label">
+        KEY POINTS
+      </span>
+
+      <ul id="summaryKeyPoints"></ul>
+
+    </div>
+
+
+    <div class="summary-result-section">
+
+      <span class="tool-label">
+        QUICK TAKEAWAY
+      </span>
+
+      <p id="summaryTakeaway"></p>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- =========================================
+     AI STUDY ASSISTANT WORKSPACE
+========================================= -->
+
+<div
+  class="tool-workspace"
+  id="studyAssistantWorkspace"
+>
+
+  <div class="tool-workspace-head">
+    <div>
+
+      <span class="tool-label">
+        AI STUDY ASSISTANT
+      </span>
+
+      <h3>
+        Learn difficult topics in a simpler way.
+      </h3>
+
+      <p>
+        Enter a topic, choose your level and let ForgeMind
+        create an explanation, key concepts, questions and
+        a focused study plan.
+      </p>
+
+    </div>
+  </div>
+
+
+  <div class="tool-form">
+
+    <div class="form-row">
+
+      <label for="studyLevel">
+        Student Level
+      </label>
+
+      <select id="studyLevel">
+
+        <option value="beginner">
+          Beginner / BCA Student
+        </option>
+
+        <option value="intermediate">
+          Intermediate
+        </option>
+
+        <option value="advanced">
+          Advanced
+        </option>
+
+      </select>
+
+    </div>
+
+
+    <div class="form-row">
+
+      <label for="studyTopic">
+        What do you want to study?
+      </label>
+
+      <input
+        type="text"
+        id="studyTopic"
+        placeholder="Example: C++ OOP, Computer Networks, DBMS Normalization..."
+      />
+
+    </div>
+
+
+    <div class="form-row study-full-row">
+
+      <label for="studyRequest">
+        What kind of help do you need?
+      </label>
+
+      <textarea
+        id="studyRequest"
+        class="study-request"
+        placeholder="Example: Explain inheritance with simple examples and give me 5 practice questions."
+      ></textarea>
+
+    </div>
+
+
+    <button
+      class="btn btn-primary"
+      id="generateStudyBtn"
+      type="button"
+    >
+      ⚡ Generate Study Help
+    </button>
+
+  </div>
+
+
+  <!-- LOADING -->
+
+  <div
+    class="tool-loading"
+    id="studyAssistantLoading"
+    style="display:none;"
+  >
+
+    <div class="big">🎓</div>
+
+    <strong>
+      ForgeMind is preparing your study help...
+    </strong>
+
+    <p>
+      Building a simple explanation, concepts and practice material.
+    </p>
+
+  </div>
+
+
+  <!-- RESULT -->
+
+  <div
+    class="study-result"
+    id="studyResult"
+    style="display:none;"
+  >
+
+    <!-- EXPLANATION -->
+
+    <div class="study-result-section">
+
+      <span class="tool-label">
+        EXPLANATION
+      </span>
+
+      <p
+        id="studyExplanation"
+        class="study-explanation"
+      ></p>
+
+    </div>
+
+
+    <!-- KEY CONCEPTS -->
+
+    <div class="study-result-section">
+
+      <span class="tool-label">
+        KEY CONCEPTS
+      </span>
+
+      <ul id="studyConcepts"></ul>
+
+    </div>
+
+
+    <!-- PRACTICE QUESTIONS -->
+
+    <div class="study-result-section">
+
+      <div class="prompt-result-head">
+
+        <span class="tool-label">
+          PRACTICE QUESTIONS
+        </span>
+
+        <button
+          class="use-idea-btn"
+          id="copyStudyBtn"
+          type="button"
+        >
+          Copy Study Help
+        </button>
+
+      </div>
+
+      <ol id="studyQuestions"></ol>
+
+    </div>
+
+
+    <!-- STUDY PLAN -->
+
+    <div class="study-result-section">
+
+      <span class="tool-label">
+        STUDY PLAN
+      </span>
+
+      <ol id="studyPlan"></ol>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- =========================================
+     AI PROJECT PLANNER WORKSPACE
+========================================= -->
+
+<div
+  class="tool-workspace"
+  id="projectPlannerWorkspace"
+>
+
+  <div class="tool-workspace-head">
+    <div>
+
+      <span class="tool-label">
+        AI PROJECT PLANNER
+      </span>
+
+      <h3>
+        Turn your idea into a practical development roadmap.
+      </h3>
+
+      <p>
+        Describe your project and ForgeMind will break it into
+        goals, milestones, tasks, technologies and a clear
+        development sequence.
+      </p>
+
+    </div>
+  </div>
+
+
+  <div class="tool-form">
+
+    <div class="form-row">
+
+      <label for="plannerLevel">
+        Project Level
+      </label>
+
+      <select id="plannerLevel">
+
+        <option value="beginner">
+          Beginner / Student
+        </option>
+
+        <option value="intermediate">
+          Intermediate
+        </option>
+
+        <option value="advanced">
+          Advanced
+        </option>
+
+      </select>
+
+    </div>
+
+
+    <div class="form-row">
+
+      <label for="plannerType">
+        Project Type
+      </label>
+
+      <select id="plannerType">
+
+        <option value="web">
+          Web Application
+        </option>
+
+        <option value="mobile">
+          Android App
+        </option>
+
+        <option value="ai-assistant">
+          AI Assistant
+        </option>
+
+        <option value="automation">
+          AI Automation
+        </option>
+
+        <option value="other">
+          Other
+        </option>
+
+      </select>
+
+    </div>
+
+
+    <div class="form-row planner-full-row">
+
+      <label for="plannerIdea">
+        Project Idea
+      </label>
+
+      <textarea
+        id="plannerIdea"
+        placeholder="Example: Build an AI study assistant for BCA students that explains topics, creates quizzes and tracks progress."
+      ></textarea>
+
+    </div>
+
+
+    <div class="form-row planner-full-row">
+
+      <label for="plannerGoal">
+        Main Goal
+      </label>
+
+      <textarea
+        id="plannerGoal"
+        placeholder="Example: I want a practical college project that can be built in 4 to 6 weeks."
+      ></textarea>
+
+    </div>
+
+
+    <button
+      class="btn btn-primary"
+      id="generatePlanBtn"
+      type="button"
+    >
+      ⚡ Create Project Plan
+    </button>
+
+  </div>
+
+
+  <!-- LOADING -->
+
+  <div
+    class="tool-loading"
+    id="projectPlannerLoading"
+    style="display:none;"
+  >
+
+    <div class="big">🧩</div>
+
+    <strong>
+      ForgeMind is planning your project...
+    </strong>
+
+    <p>
+      Breaking your idea into milestones, tasks and technologies.
+    </p>
+
+  </div>
+
+
+  <!-- RESULT -->
+
+  <div
+    class="planner-result"
+    id="plannerResult"
+    style="display:none;"
+  >
+
+    <!-- PROJECT OVERVIEW -->
+
+    <div class="planner-result-section">
+
+      <div class="planner-result-head">
+
+        <div>
+
+          <span class="tool-label">
+            PROJECT OVERVIEW
+          </span>
+
+          <h3 id="plannerTitle">
+            Project Plan
+          </h3>
+
+        </div>
+
+        <button
+          class="use-idea-btn"
+          id="copyPlannerBtn"
+          type="button"
+        >
+          Copy Plan
+        </button>
+
+      </div>
+
+      <p id="plannerOverview"></p>
+
+    </div>
+
+
+    <!-- GOALS -->
+
+    <div class="planner-result-section">
+
+      <span class="tool-label">
+        PROJECT GOALS
+      </span>
+
+      <ul id="plannerGoals"></ul>
+
+    </div>
+
+
+    <!-- TECHNOLOGIES -->
+
+    <div class="planner-result-section">
+
+      <span class="tool-label">
+        RECOMMENDED TECHNOLOGIES
+      </span>
+
+      <div
+        class="tech-list"
+        id="plannerTechnologies"
+      ></div>
+
+    </div>
+
+
+    <!-- MILESTONES -->
+
+    <div class="planner-result-section">
+
+      <span class="tool-label">
+        DEVELOPMENT MILESTONES
+      </span>
+
+      <div id="plannerMilestones"></div>
+
+    </div>
+
+
+    <!-- FIRST STEP -->
+
+    <div class="planner-result-section">
+
+      <span class="tool-label">
+        FIRST PRACTICAL STEP
+      </span>
+
+      <p id="plannerFirstStep"></p>
+
+    </div>
+
+  </div>
+
+</div>
+      </div>
+    </section>
+
+    <!-- =======================================
+         WORKFLOW
+    ======================================== -->
+    <section class="section">
+      <div class="container">
+
+        <h2 class="section-title">
+          How <span class="gradient-text">ForgeMind</span> works
+        </h2>
+
+        <p class="section-subtitle">
+          A simple workflow designed around turning an idea into something buildable.
+        </p>
+
+        <div class="workflow">
+
+          <div class="step">
+            <div class="step-number">01</div>
+            <h3>Idea</h3>
+            <p>
+              Describe a problem, product or AI idea in simple language.
+            </p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">02</div>
+            <h3>Analyze</h3>
+            <p>
+              Break the idea into purpose, users, features and technical needs.
+            </p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">03</div>
+            <h3>Create</h3>
+            <p>
+              Generate a structured project plan and starter direction.
+            </p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">04</div>
+            <h3>Build</h3>
+            <p>
+              Develop, test, improve and connect useful AI services.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================
+         PROJECT EXAMPLES
+    ======================================== -->
+    <section class="section" id="projects">
+      <div class="container">
+
+        <h2 class="section-title">
+          Example <span class="gradient-text">AI projects.</span>
+        </h2>
+
+        <p class="section-subtitle">
+          Sample ideas showing what the platform could help users plan.
+        </p>
+
+        <div class="cards">
+
+          <div class="card">
+            <span class="project-tag">Education</span>
+            <h3>AI Study Assistant</h3>
+            <p>
+              Helps students summarize lessons, explain difficult topics
+              and build revision plans.
+            </p>
+            <a
+              href="#builder"
+              class="project-link"
+              data-example="Create an AI study assistant for BCA students."
+            >
+              Use this idea →
+            </a>
+          </div>
+
+          <div class="card">
+            <span class="project-tag">Development</span>
+            <h3>AI Code Helper</h3>
+            <p>
+              Provides code explanations, debugging guidance and
+              step-by-step learning support.
+            </p>
+            <a
+              href="#builder"
+              class="project-link"
+              data-example="Create an AI code helper for beginner programmers."
+            >
+              Use this idea →
+            </a>
+          </div>
+
+          <div class="card">
+            <span class="project-tag">Productivity</span>
+            <h3>AI Resume Builder</h3>
+            <p>
+              Turns user information into a structured resume plan
+              tailored to a specific role.
+            </p>
+            <a
+              href="#builder"
+              class="project-link"
+              data-example="Create an AI resume builder for college students."
+            >
+              Use this idea →
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================
+         ABOUT
+    ======================================== -->
+    <section class="section" id="about">
+      <div class="container">
+
+        <h2 class="section-title">
+          About <span class="gradient-text">ForgeMind AI</span>
+        </h2>
+
+        <p class="section-subtitle">
+          A project built around the theme “AI se AI ka Nirman”.
+        </p>
+
+        <div class="about-grid">
+
+          <div class="about-box">
+            <h3 style="margin-bottom:12px;">The idea</h3>
+
+            <p>
+              ForgeMind AI explores how AI tools can help people move from
+              a simple idea to a structured AI-based solution. The focus is
+              on making the process easier to understand for students and beginners.
+            </p>
+
+            <p class="highlight">
+              The current version includes a working AI Builder connected
+              to a Node.js backend and Gemini API, plus six AI utility tools
+              with structured AI output and frontend rendering.
+            </p>
+          </div>
+
+          <div class="about-box">
+            <h3 style="margin-bottom:12px;">Project roadmap</h3>
+            <p>✓ Website prototype</p>
+            <p>✓ Real AI project-plan generation</p>
+            <p>✓ Structured AI output & result rendering</p>
+            <p>✓ 6 AI utility tools</p>
+            <p>→ User projects & saved history</p>
+            <p>→ Authentication</p>
+            <p>→ Android app version</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================
+       FOOTER
+  ========================================== -->
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        <span class="footer-brand">ForgeMind AI</span>
+        · AI se AI ka Nirman
+      </div>
+
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#builder">Builder</a>
+        <a href="#about">About</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

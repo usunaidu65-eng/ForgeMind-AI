@@ -1,0 +1,82 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <linearGradient id="forgeGradient" x1="30" y1="30" x2="225" y2="225" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8D6BFF"/>
+      <stop offset="55%" stop-color="#6EA8FF"/>
+      <stop offset="100%" stop-color="#5EE6A8"/>
+    </linearGradient>
+
+    <linearGradient id="sparkGradient" x1="165" y1="35" x2="215" y2="90" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#BBD2FF"/>
+    </linearGradient>
+
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+    </filter>
+  </defs>
+
+  <!-- Outer glow -->
+  <rect
+    x="24"
+    y="24"
+    width="208"
+    height="208"
+    rx="58"
+    fill="url(#forgeGradient)"
+    opacity="0.18"
+    filter="url(#softGlow)"
+  />
+
+  <!-- Main logo background -->
+  <rect
+    x="20"
+    y="20"
+    width="216"
+    height="216"
+    rx="56"
+    fill="#0A1020"
+    stroke="url(#forgeGradient)"
+    stroke-width="5"
+  />
+
+  <!-- Geometric F -->
+  <path
+    d="M70 65
+       H178
+       V96
+       H108
+       V118
+       H164
+       V148
+       H108
+       V191
+       H70
+       V65Z"
+    fill="white"
+  />
+
+  <!-- AI Spark -->
+  <path
+    d="M181 45
+       L190 65
+       L210 74
+       L190 83
+       L181 104
+       L172 83
+       L152 74
+       L172 65
+       L181 45Z"
+    fill="url(#sparkGradient)"
+  />
+
+  <!-- Small inner highlight -->
+  <circle
+    cx="181"
+    cy="74"
+    r="5"
+    fill="#FFFFFF"
+  />
+
+</svg>
