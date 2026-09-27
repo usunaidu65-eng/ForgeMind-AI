@@ -236,7 +236,7 @@ Do not wrap the JSON in code fences.
   ----------------------------------------- */
 
   const response = await fetch(
-    "http://localhost:3000/api/generate",
+    "/api/generate",
     {
       method: "POST",
 
@@ -632,7 +632,7 @@ async function generateProjectIdeas() {
 
   try {
     const response = await fetch(
-      "http://localhost:3000/api/idea-generator",
+      "/api/idea-generator",
       {
         method: "POST",
         headers: {
@@ -851,7 +851,7 @@ async function generatePrompt() {
   try {
 
     const response = await fetch(
-      "http://localhost:3000/api/prompt-generator",
+      "/api/prompt-generator",
       {
         method: "POST",
         headers: {
@@ -1092,7 +1092,7 @@ async function generateCodeHelp() {
     --------------------------------------- */
 
     const response = await fetch(
-      "http://localhost:3000/api/code-assistant",
+      "/api/code-assistant",
       {
         method: "POST",
 
@@ -1500,7 +1500,7 @@ async function generateSummary() {
 
     const response =
       await fetch(
-        "http://localhost:3000/api/text-summarizer",
+        "/api/text-summarizer",
         {
           method: "POST",
 
@@ -1909,7 +1909,7 @@ async function generateStudyHelp() {
 
     const response =
       await fetch(
-        "http://localhost:3000/api/study-assistant",
+        "/api/study-assistant",
         {
           method: "POST",
 
@@ -2426,7 +2426,7 @@ async function generateProjectRoadmap() {
 
     const response =
       await fetch(
-        "http://localhost:3000/api/project-planner",
+        "/api/project-planner",
         {
           method: "POST",
 
